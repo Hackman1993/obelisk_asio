@@ -68,4 +68,14 @@ namespace obelisk::core::details {
         if(socket_.is_open())
             socket_.close();
     }
+
+    void socket_base::connect(const std::string &addr, std::uint16_t port) {
+        boost::asio::ip::tcp::resolver::query resolver("127.0.0.1", "7890");
+        boost::asio::ip::tcp::endpoint ep(boost::asio::ip::address::from_string(addr),port);
+        socket_.async_connect(ep, [&](const boost::system::error_code& error){
+            if(!error)
+                this->e_connected_();
+        });
+
+    }
 } // obelisk::core::details

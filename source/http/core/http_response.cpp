@@ -34,6 +34,7 @@ namespace obelisk::http {
             {EST_UNSUPPORTED_MEDIA_TYPE, "415 Unsupported Media Type"},
             {EST_REQUESTED_RANGE_NOT_SATISFIABLE, "416 Requested Range Not Satisfiable"},
             {EST_EXPECTATION_FAILED, "417 Expectation Failed"},
+            {EST_UNPROCESSABLE_CONTENT, "422 Unprocessable Content"},
             {EST_INTERNAL_SERVER_ERROR, "500 Internal Server Error"},
             {EST_NOT_IMPLEMENTED, "501 Not Implemented"},
             {EST_BAD_GATEWAY, "502 Bad Gateway"},

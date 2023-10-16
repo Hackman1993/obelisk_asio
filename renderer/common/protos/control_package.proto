@@ -1,0 +1,9 @@
+syntax = "proto3";
+import public "rendering_job.proto";
+enum RenderMessageDetail{
+  RMD_TRY = 0;
+  RMD_FEEDBACK =1;
+}
+message ControlPackage{
+
+}

@@ -6,7 +6,7 @@
 #define OBELISK_REQUIRED_VALIDATOR_H
 
 #include "validator_base.h"
-namespace obelisk::validator {
+namespace obelisk::http {
 
     class required_validator : public validator_base {
     public:

@@ -16,6 +16,7 @@ namespace obelisk::core::details {
         virtual void e_data_sent(std::size_t bytes_transferred) = 0;
         virtual void e_data_received(std::size_t bytes_transferred) = 0;
         virtual void send();
+        virtual void connect(const std::string& addr, std::uint16_t port);
         virtual void close();
     protected:
         socket_base(boost::asio::ip::tcp::socket& socket);

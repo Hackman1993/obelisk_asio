@@ -1,0 +1,24 @@
+syntax = "proto3";
+enum ControlPackageCategory{
+  CLIENT_RENDERER_REGISTER = 0;
+  CLIENT_RENDERER_JOB_FEEDBACK = 1;
+  CLIENT_TRY_GET_RENDER_JOB = 3;
+  CLIENT_QUERY_JOB_DETAIL = 4;
+}
+message RenderingJobItem{
+  int32 frame = 1;
+  string working_dir = 2;
+}
+
+message ProjectFiles{
+  string relative_path = 1;
+  string download_url = 2;
+}
+
+message RenderingJob{
+  string token = 1;
+  uint32 project_id = 2;
+  uint32 jobid = 3;
+  repeated ProjectFiles files = 4;
+  ProjectFiles projectFile = 5;
+}

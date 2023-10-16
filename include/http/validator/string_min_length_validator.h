@@ -5,8 +5,7 @@
 #ifndef OBELISK_STRING_MIN_LENGTH_VALIDATOR_H
 #define OBELISK_STRING_MIN_LENGTH_VALIDATOR_H
 #include "validator_base.h"
-namespace obelisk {
-  namespace validator {
+namespace obelisk::http {
 
     class string_min_length_validator : public validator_base{
     public:
@@ -19,7 +18,6 @@ namespace obelisk {
 
     std::shared_ptr<string_min_length_validator> min_length(std::size_t len);
 
-  } // obelisk
-} // validator
+} // obelisk::http
 
 #endif //OBELISK_STRING_MIN_LENGTH_VALIDATOR_H

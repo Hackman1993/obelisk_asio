@@ -8,9 +8,8 @@
 #include <memory>
 #include <sahara/string/string.h>
 
-namespace obelisk {
+namespace obelisk::http {
     class http_request;
-    namespace validator {
         class validator_base {
         public:
             virtual void validate(const std::string &name, http_request &request) = 0;
@@ -20,7 +19,6 @@ namespace obelisk {
             std::string name_;
             std::vector<std::shared_ptr<validator_base>> validators_;
         };
-    }
 } // validator
 
 #endif //OBELISK_VALIDATOR_BASE_H
