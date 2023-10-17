@@ -1,14 +1,12 @@
 /***********************************************************************************************************************
  * @author Hackman Lo
- * @file obelisk.h
+ * @file ability_define.h
  * @description 
- * @created_at 2023-10-16
+ * @created_at 2023-10-17
 ***********************************************************************************************************************/
 
-#ifndef OBELISK_OBELISK_H
-#define OBELISK_OBELISK_H
-#include "http/http_server.h"
-#include "http/http_connection.h"
-#include "debug/cost_timer.h"
+#ifndef OBELISK_ABILITY_DEFINE_H
+#define OBELISK_ABILITY_DEFINE_H
+#define ABI_RENDER 0x01
 
-#endif //OBELISK_OBELISK_H
+#endif //OBELISK_ABILITY_DEFINE_H

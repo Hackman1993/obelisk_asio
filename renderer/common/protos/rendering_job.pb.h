@@ -45,20 +45,26 @@ struct TableStruct_rendering_5fjob_2eproto {
   static const uint32_t offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_rendering_5fjob_2eproto;
-class ProjectFiles;
-struct ProjectFilesDefaultTypeInternal;
-extern ProjectFilesDefaultTypeInternal _ProjectFiles_default_instance_;
-class RenderingJob;
-struct RenderingJobDefaultTypeInternal;
-extern RenderingJobDefaultTypeInternal _RenderingJob_default_instance_;
-class RenderingJobItem;
-struct RenderingJobItemDefaultTypeInternal;
-extern RenderingJobItemDefaultTypeInternal _RenderingJobItem_default_instance_;
+namespace proto {
+namespace renderer {
+class project_files;
+struct project_filesDefaultTypeInternal;
+extern project_filesDefaultTypeInternal _project_files_default_instance_;
+class rendering_job;
+struct rendering_jobDefaultTypeInternal;
+extern rendering_jobDefaultTypeInternal _rendering_job_default_instance_;
+class rendering_job_item;
+struct rendering_job_itemDefaultTypeInternal;
+extern rendering_job_itemDefaultTypeInternal _rendering_job_item_default_instance_;
+}  // namespace renderer
+}  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
-template<> ::ProjectFiles* Arena::CreateMaybeMessage<::ProjectFiles>(Arena*);
-template<> ::RenderingJob* Arena::CreateMaybeMessage<::RenderingJob>(Arena*);
-template<> ::RenderingJobItem* Arena::CreateMaybeMessage<::RenderingJobItem>(Arena*);
+template<> ::proto::renderer::project_files* Arena::CreateMaybeMessage<::proto::renderer::project_files>(Arena*);
+template<> ::proto::renderer::rendering_job* Arena::CreateMaybeMessage<::proto::renderer::rendering_job>(Arena*);
+template<> ::proto::renderer::rendering_job_item* Arena::CreateMaybeMessage<::proto::renderer::rendering_job_item>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
+namespace proto {
+namespace renderer {
 
 enum ControlPackageCategory : int {
   CLIENT_RENDERER_REGISTER = 0,
@@ -89,24 +95,24 @@ inline bool ControlPackageCategory_Parse(
 }
 // ===================================================================
 
-class RenderingJobItem final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:RenderingJobItem) */ {
+class rendering_job_item final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.renderer.rendering_job_item) */ {
  public:
-  inline RenderingJobItem() : RenderingJobItem(nullptr) {}
-  ~RenderingJobItem() override;
-  explicit PROTOBUF_CONSTEXPR RenderingJobItem(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline rendering_job_item() : rendering_job_item(nullptr) {}
+  ~rendering_job_item() override;
+  explicit PROTOBUF_CONSTEXPR rendering_job_item(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  RenderingJobItem(const RenderingJobItem& from);
-  RenderingJobItem(RenderingJobItem&& from) noexcept
-    : RenderingJobItem() {
+  rendering_job_item(const rendering_job_item& from);
+  rendering_job_item(rendering_job_item&& from) noexcept
+    : rendering_job_item() {
     *this = ::std::move(from);
   }
 
-  inline RenderingJobItem& operator=(const RenderingJobItem& from) {
+  inline rendering_job_item& operator=(const rendering_job_item& from) {
     CopyFrom(from);
     return *this;
   }
-  inline RenderingJobItem& operator=(RenderingJobItem&& from) noexcept {
+  inline rendering_job_item& operator=(rendering_job_item&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -129,20 +135,20 @@ class RenderingJobItem final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const RenderingJobItem& default_instance() {
+  static const rendering_job_item& default_instance() {
     return *internal_default_instance();
   }
-  static inline const RenderingJobItem* internal_default_instance() {
-    return reinterpret_cast<const RenderingJobItem*>(
-               &_RenderingJobItem_default_instance_);
+  static inline const rendering_job_item* internal_default_instance() {
+    return reinterpret_cast<const rendering_job_item*>(
+               &_rendering_job_item_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(RenderingJobItem& a, RenderingJobItem& b) {
+  friend void swap(rendering_job_item& a, rendering_job_item& b) {
     a.Swap(&b);
   }
-  inline void Swap(RenderingJobItem* other) {
+  inline void Swap(rendering_job_item* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -155,7 +161,7 @@ class RenderingJobItem final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(RenderingJobItem* other) {
+  void UnsafeArenaSwap(rendering_job_item* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -163,14 +169,14 @@ class RenderingJobItem final :
 
   // implements Message ----------------------------------------------
 
-  RenderingJobItem* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RenderingJobItem>(arena);
+  rendering_job_item* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<rendering_job_item>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RenderingJobItem& from);
+  void CopyFrom(const rendering_job_item& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RenderingJobItem& from) {
-    RenderingJobItem::MergeImpl(*this, from);
+  void MergeFrom( const rendering_job_item& from) {
+    rendering_job_item::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -188,15 +194,15 @@ class RenderingJobItem final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(RenderingJobItem* other);
+  void InternalSwap(rendering_job_item* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "RenderingJobItem";
+    return "proto.renderer.rendering_job_item";
   }
   protected:
-  explicit RenderingJobItem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit rendering_job_item(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -236,7 +242,7 @@ class RenderingJobItem final :
   void _internal_set_frame(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:RenderingJobItem)
+  // @@protoc_insertion_point(class_scope:proto.renderer.rendering_job_item)
  private:
   class _Internal;
 
@@ -253,24 +259,24 @@ class RenderingJobItem final :
 };
 // -------------------------------------------------------------------
 
-class ProjectFiles final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ProjectFiles) */ {
+class project_files final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.renderer.project_files) */ {
  public:
-  inline ProjectFiles() : ProjectFiles(nullptr) {}
-  ~ProjectFiles() override;
-  explicit PROTOBUF_CONSTEXPR ProjectFiles(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline project_files() : project_files(nullptr) {}
+  ~project_files() override;
+  explicit PROTOBUF_CONSTEXPR project_files(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  ProjectFiles(const ProjectFiles& from);
-  ProjectFiles(ProjectFiles&& from) noexcept
-    : ProjectFiles() {
+  project_files(const project_files& from);
+  project_files(project_files&& from) noexcept
+    : project_files() {
     *this = ::std::move(from);
   }
 
-  inline ProjectFiles& operator=(const ProjectFiles& from) {
+  inline project_files& operator=(const project_files& from) {
     CopyFrom(from);
     return *this;
   }
-  inline ProjectFiles& operator=(ProjectFiles&& from) noexcept {
+  inline project_files& operator=(project_files&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -293,20 +299,20 @@ class ProjectFiles final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const ProjectFiles& default_instance() {
+  static const project_files& default_instance() {
     return *internal_default_instance();
   }
-  static inline const ProjectFiles* internal_default_instance() {
-    return reinterpret_cast<const ProjectFiles*>(
-               &_ProjectFiles_default_instance_);
+  static inline const project_files* internal_default_instance() {
+    return reinterpret_cast<const project_files*>(
+               &_project_files_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(ProjectFiles& a, ProjectFiles& b) {
+  friend void swap(project_files& a, project_files& b) {
     a.Swap(&b);
   }
-  inline void Swap(ProjectFiles* other) {
+  inline void Swap(project_files* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -319,7 +325,7 @@ class ProjectFiles final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(ProjectFiles* other) {
+  void UnsafeArenaSwap(project_files* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -327,14 +333,14 @@ class ProjectFiles final :
 
   // implements Message ----------------------------------------------
 
-  ProjectFiles* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<ProjectFiles>(arena);
+  project_files* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<project_files>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const ProjectFiles& from);
+  void CopyFrom(const project_files& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const ProjectFiles& from) {
-    ProjectFiles::MergeImpl(*this, from);
+  void MergeFrom( const project_files& from) {
+    project_files::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -352,15 +358,15 @@ class ProjectFiles final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(ProjectFiles* other);
+  void InternalSwap(project_files* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ProjectFiles";
+    return "proto.renderer.project_files";
   }
   protected:
-  explicit ProjectFiles(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit project_files(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -405,7 +411,7 @@ class ProjectFiles final :
   std::string* _internal_mutable_download_url();
   public:
 
-  // @@protoc_insertion_point(class_scope:ProjectFiles)
+  // @@protoc_insertion_point(class_scope:proto.renderer.project_files)
  private:
   class _Internal;
 
@@ -422,24 +428,24 @@ class ProjectFiles final :
 };
 // -------------------------------------------------------------------
 
-class RenderingJob final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:RenderingJob) */ {
+class rendering_job final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.renderer.rendering_job) */ {
  public:
-  inline RenderingJob() : RenderingJob(nullptr) {}
-  ~RenderingJob() override;
-  explicit PROTOBUF_CONSTEXPR RenderingJob(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline rendering_job() : rendering_job(nullptr) {}
+  ~rendering_job() override;
+  explicit PROTOBUF_CONSTEXPR rendering_job(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  RenderingJob(const RenderingJob& from);
-  RenderingJob(RenderingJob&& from) noexcept
-    : RenderingJob() {
+  rendering_job(const rendering_job& from);
+  rendering_job(rendering_job&& from) noexcept
+    : rendering_job() {
     *this = ::std::move(from);
   }
 
-  inline RenderingJob& operator=(const RenderingJob& from) {
+  inline rendering_job& operator=(const rendering_job& from) {
     CopyFrom(from);
     return *this;
   }
-  inline RenderingJob& operator=(RenderingJob&& from) noexcept {
+  inline rendering_job& operator=(rendering_job&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -462,20 +468,20 @@ class RenderingJob final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const RenderingJob& default_instance() {
+  static const rendering_job& default_instance() {
     return *internal_default_instance();
   }
-  static inline const RenderingJob* internal_default_instance() {
-    return reinterpret_cast<const RenderingJob*>(
-               &_RenderingJob_default_instance_);
+  static inline const rendering_job* internal_default_instance() {
+    return reinterpret_cast<const rendering_job*>(
+               &_rendering_job_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(RenderingJob& a, RenderingJob& b) {
+  friend void swap(rendering_job& a, rendering_job& b) {
     a.Swap(&b);
   }
-  inline void Swap(RenderingJob* other) {
+  inline void Swap(rendering_job* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -488,7 +494,7 @@ class RenderingJob final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(RenderingJob* other) {
+  void UnsafeArenaSwap(rendering_job* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -496,14 +502,14 @@ class RenderingJob final :
 
   // implements Message ----------------------------------------------
 
-  RenderingJob* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RenderingJob>(arena);
+  rendering_job* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<rendering_job>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RenderingJob& from);
+  void CopyFrom(const rendering_job& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RenderingJob& from) {
-    RenderingJob::MergeImpl(*this, from);
+  void MergeFrom( const rendering_job& from) {
+    rendering_job::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -521,15 +527,15 @@ class RenderingJob final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(RenderingJob* other);
+  void InternalSwap(rendering_job* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "RenderingJob";
+    return "proto.renderer.rendering_job";
   }
   protected:
-  explicit RenderingJob(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit rendering_job(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -545,26 +551,26 @@ class RenderingJob final :
   enum : int {
     kFilesFieldNumber = 4,
     kTokenFieldNumber = 1,
-    kProjectFileFieldNumber = 5,
     kProjectIdFieldNumber = 2,
+    kProjectFileFieldNumber = 5,
     kJobidFieldNumber = 3,
   };
-  // repeated .ProjectFiles files = 4;
+  // repeated .proto.renderer.project_files files = 4;
   int files_size() const;
   private:
   int _internal_files_size() const;
   public:
   void clear_files();
-  ::ProjectFiles* mutable_files(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ProjectFiles >*
+  ::proto::renderer::project_files* mutable_files(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::renderer::project_files >*
       mutable_files();
   private:
-  const ::ProjectFiles& _internal_files(int index) const;
-  ::ProjectFiles* _internal_add_files();
+  const ::proto::renderer::project_files& _internal_files(int index) const;
+  ::proto::renderer::project_files* _internal_add_files();
   public:
-  const ::ProjectFiles& files(int index) const;
-  ::ProjectFiles* add_files();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ProjectFiles >&
+  const ::proto::renderer::project_files& files(int index) const;
+  ::proto::renderer::project_files* add_files();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::renderer::project_files >&
       files() const;
 
   // string token = 1;
@@ -581,32 +587,37 @@ class RenderingJob final :
   std::string* _internal_mutable_token();
   public:
 
-  // .ProjectFiles projectFile = 5;
+  // string project_id = 2;
+  void clear_project_id();
+  const std::string& project_id() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_project_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_project_id();
+  PROTOBUF_NODISCARD std::string* release_project_id();
+  void set_allocated_project_id(std::string* project_id);
+  private:
+  const std::string& _internal_project_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_project_id(const std::string& value);
+  std::string* _internal_mutable_project_id();
+  public:
+
+  // .proto.renderer.project_files projectFile = 5;
   bool has_projectfile() const;
   private:
   bool _internal_has_projectfile() const;
   public:
   void clear_projectfile();
-  const ::ProjectFiles& projectfile() const;
-  PROTOBUF_NODISCARD ::ProjectFiles* release_projectfile();
-  ::ProjectFiles* mutable_projectfile();
-  void set_allocated_projectfile(::ProjectFiles* projectfile);
+  const ::proto::renderer::project_files& projectfile() const;
+  PROTOBUF_NODISCARD ::proto::renderer::project_files* release_projectfile();
+  ::proto::renderer::project_files* mutable_projectfile();
+  void set_allocated_projectfile(::proto::renderer::project_files* projectfile);
   private:
-  const ::ProjectFiles& _internal_projectfile() const;
-  ::ProjectFiles* _internal_mutable_projectfile();
+  const ::proto::renderer::project_files& _internal_projectfile() const;
+  ::proto::renderer::project_files* _internal_mutable_projectfile();
   public:
   void unsafe_arena_set_allocated_projectfile(
-      ::ProjectFiles* projectfile);
-  ::ProjectFiles* unsafe_arena_release_projectfile();
-
-  // uint32 project_id = 2;
-  void clear_project_id();
-  uint32_t project_id() const;
-  void set_project_id(uint32_t value);
-  private:
-  uint32_t _internal_project_id() const;
-  void _internal_set_project_id(uint32_t value);
-  public:
+      ::proto::renderer::project_files* projectfile);
+  ::proto::renderer::project_files* unsafe_arena_release_projectfile();
 
   // uint32 jobid = 3;
   void clear_jobid();
@@ -617,7 +628,7 @@ class RenderingJob final :
   void _internal_set_jobid(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:RenderingJob)
+  // @@protoc_insertion_point(class_scope:proto.renderer.rendering_job)
  private:
   class _Internal;
 
@@ -625,10 +636,10 @@ class RenderingJob final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ProjectFiles > files_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::renderer::project_files > files_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr token_;
-    ::ProjectFiles* projectfile_;
-    uint32_t project_id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr project_id_;
+    ::proto::renderer::project_files* projectfile_;
     uint32_t jobid_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -644,64 +655,64 @@ class RenderingJob final :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// RenderingJobItem
+// rendering_job_item
 
 // int32 frame = 1;
-inline void RenderingJobItem::clear_frame() {
+inline void rendering_job_item::clear_frame() {
   _impl_.frame_ = 0;
 }
-inline int32_t RenderingJobItem::_internal_frame() const {
+inline int32_t rendering_job_item::_internal_frame() const {
   return _impl_.frame_;
 }
-inline int32_t RenderingJobItem::frame() const {
-  // @@protoc_insertion_point(field_get:RenderingJobItem.frame)
+inline int32_t rendering_job_item::frame() const {
+  // @@protoc_insertion_point(field_get:proto.renderer.rendering_job_item.frame)
   return _internal_frame();
 }
-inline void RenderingJobItem::_internal_set_frame(int32_t value) {
+inline void rendering_job_item::_internal_set_frame(int32_t value) {
   
   _impl_.frame_ = value;
 }
-inline void RenderingJobItem::set_frame(int32_t value) {
+inline void rendering_job_item::set_frame(int32_t value) {
   _internal_set_frame(value);
-  // @@protoc_insertion_point(field_set:RenderingJobItem.frame)
+  // @@protoc_insertion_point(field_set:proto.renderer.rendering_job_item.frame)
 }
 
 // string working_dir = 2;
-inline void RenderingJobItem::clear_working_dir() {
+inline void rendering_job_item::clear_working_dir() {
   _impl_.working_dir_.ClearToEmpty();
 }
-inline const std::string& RenderingJobItem::working_dir() const {
-  // @@protoc_insertion_point(field_get:RenderingJobItem.working_dir)
+inline const std::string& rendering_job_item::working_dir() const {
+  // @@protoc_insertion_point(field_get:proto.renderer.rendering_job_item.working_dir)
   return _internal_working_dir();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RenderingJobItem::set_working_dir(ArgT0&& arg0, ArgT... args) {
+void rendering_job_item::set_working_dir(ArgT0&& arg0, ArgT... args) {
  
  _impl_.working_dir_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:RenderingJobItem.working_dir)
+  // @@protoc_insertion_point(field_set:proto.renderer.rendering_job_item.working_dir)
 }
-inline std::string* RenderingJobItem::mutable_working_dir() {
+inline std::string* rendering_job_item::mutable_working_dir() {
   std::string* _s = _internal_mutable_working_dir();
-  // @@protoc_insertion_point(field_mutable:RenderingJobItem.working_dir)
+  // @@protoc_insertion_point(field_mutable:proto.renderer.rendering_job_item.working_dir)
   return _s;
 }
-inline const std::string& RenderingJobItem::_internal_working_dir() const {
+inline const std::string& rendering_job_item::_internal_working_dir() const {
   return _impl_.working_dir_.Get();
 }
-inline void RenderingJobItem::_internal_set_working_dir(const std::string& value) {
+inline void rendering_job_item::_internal_set_working_dir(const std::string& value) {
   
   _impl_.working_dir_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RenderingJobItem::_internal_mutable_working_dir() {
+inline std::string* rendering_job_item::_internal_mutable_working_dir() {
   
   return _impl_.working_dir_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RenderingJobItem::release_working_dir() {
-  // @@protoc_insertion_point(field_release:RenderingJobItem.working_dir)
+inline std::string* rendering_job_item::release_working_dir() {
+  // @@protoc_insertion_point(field_release:proto.renderer.rendering_job_item.working_dir)
   return _impl_.working_dir_.Release();
 }
-inline void RenderingJobItem::set_allocated_working_dir(std::string* working_dir) {
+inline void rendering_job_item::set_allocated_working_dir(std::string* working_dir) {
   if (working_dir != nullptr) {
     
   } else {
@@ -713,49 +724,49 @@ inline void RenderingJobItem::set_allocated_working_dir(std::string* working_dir
     _impl_.working_dir_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:RenderingJobItem.working_dir)
+  // @@protoc_insertion_point(field_set_allocated:proto.renderer.rendering_job_item.working_dir)
 }
 
 // -------------------------------------------------------------------
 
-// ProjectFiles
+// project_files
 
 // string relative_path = 1;
-inline void ProjectFiles::clear_relative_path() {
+inline void project_files::clear_relative_path() {
   _impl_.relative_path_.ClearToEmpty();
 }
-inline const std::string& ProjectFiles::relative_path() const {
-  // @@protoc_insertion_point(field_get:ProjectFiles.relative_path)
+inline const std::string& project_files::relative_path() const {
+  // @@protoc_insertion_point(field_get:proto.renderer.project_files.relative_path)
   return _internal_relative_path();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ProjectFiles::set_relative_path(ArgT0&& arg0, ArgT... args) {
+void project_files::set_relative_path(ArgT0&& arg0, ArgT... args) {
  
  _impl_.relative_path_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:ProjectFiles.relative_path)
+  // @@protoc_insertion_point(field_set:proto.renderer.project_files.relative_path)
 }
-inline std::string* ProjectFiles::mutable_relative_path() {
+inline std::string* project_files::mutable_relative_path() {
   std::string* _s = _internal_mutable_relative_path();
-  // @@protoc_insertion_point(field_mutable:ProjectFiles.relative_path)
+  // @@protoc_insertion_point(field_mutable:proto.renderer.project_files.relative_path)
   return _s;
 }
-inline const std::string& ProjectFiles::_internal_relative_path() const {
+inline const std::string& project_files::_internal_relative_path() const {
   return _impl_.relative_path_.Get();
 }
-inline void ProjectFiles::_internal_set_relative_path(const std::string& value) {
+inline void project_files::_internal_set_relative_path(const std::string& value) {
   
   _impl_.relative_path_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ProjectFiles::_internal_mutable_relative_path() {
+inline std::string* project_files::_internal_mutable_relative_path() {
   
   return _impl_.relative_path_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ProjectFiles::release_relative_path() {
-  // @@protoc_insertion_point(field_release:ProjectFiles.relative_path)
+inline std::string* project_files::release_relative_path() {
+  // @@protoc_insertion_point(field_release:proto.renderer.project_files.relative_path)
   return _impl_.relative_path_.Release();
 }
-inline void ProjectFiles::set_allocated_relative_path(std::string* relative_path) {
+inline void project_files::set_allocated_relative_path(std::string* relative_path) {
   if (relative_path != nullptr) {
     
   } else {
@@ -767,45 +778,45 @@ inline void ProjectFiles::set_allocated_relative_path(std::string* relative_path
     _impl_.relative_path_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:ProjectFiles.relative_path)
+  // @@protoc_insertion_point(field_set_allocated:proto.renderer.project_files.relative_path)
 }
 
 // string download_url = 2;
-inline void ProjectFiles::clear_download_url() {
+inline void project_files::clear_download_url() {
   _impl_.download_url_.ClearToEmpty();
 }
-inline const std::string& ProjectFiles::download_url() const {
-  // @@protoc_insertion_point(field_get:ProjectFiles.download_url)
+inline const std::string& project_files::download_url() const {
+  // @@protoc_insertion_point(field_get:proto.renderer.project_files.download_url)
   return _internal_download_url();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ProjectFiles::set_download_url(ArgT0&& arg0, ArgT... args) {
+void project_files::set_download_url(ArgT0&& arg0, ArgT... args) {
  
  _impl_.download_url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:ProjectFiles.download_url)
+  // @@protoc_insertion_point(field_set:proto.renderer.project_files.download_url)
 }
-inline std::string* ProjectFiles::mutable_download_url() {
+inline std::string* project_files::mutable_download_url() {
   std::string* _s = _internal_mutable_download_url();
-  // @@protoc_insertion_point(field_mutable:ProjectFiles.download_url)
+  // @@protoc_insertion_point(field_mutable:proto.renderer.project_files.download_url)
   return _s;
 }
-inline const std::string& ProjectFiles::_internal_download_url() const {
+inline const std::string& project_files::_internal_download_url() const {
   return _impl_.download_url_.Get();
 }
-inline void ProjectFiles::_internal_set_download_url(const std::string& value) {
+inline void project_files::_internal_set_download_url(const std::string& value) {
   
   _impl_.download_url_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ProjectFiles::_internal_mutable_download_url() {
+inline std::string* project_files::_internal_mutable_download_url() {
   
   return _impl_.download_url_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ProjectFiles::release_download_url() {
-  // @@protoc_insertion_point(field_release:ProjectFiles.download_url)
+inline std::string* project_files::release_download_url() {
+  // @@protoc_insertion_point(field_release:proto.renderer.project_files.download_url)
   return _impl_.download_url_.Release();
 }
-inline void ProjectFiles::set_allocated_download_url(std::string* download_url) {
+inline void project_files::set_allocated_download_url(std::string* download_url) {
   if (download_url != nullptr) {
     
   } else {
@@ -817,49 +828,49 @@ inline void ProjectFiles::set_allocated_download_url(std::string* download_url) 
     _impl_.download_url_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:ProjectFiles.download_url)
+  // @@protoc_insertion_point(field_set_allocated:proto.renderer.project_files.download_url)
 }
 
 // -------------------------------------------------------------------
 
-// RenderingJob
+// rendering_job
 
 // string token = 1;
-inline void RenderingJob::clear_token() {
+inline void rendering_job::clear_token() {
   _impl_.token_.ClearToEmpty();
 }
-inline const std::string& RenderingJob::token() const {
-  // @@protoc_insertion_point(field_get:RenderingJob.token)
+inline const std::string& rendering_job::token() const {
+  // @@protoc_insertion_point(field_get:proto.renderer.rendering_job.token)
   return _internal_token();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RenderingJob::set_token(ArgT0&& arg0, ArgT... args) {
+void rendering_job::set_token(ArgT0&& arg0, ArgT... args) {
  
  _impl_.token_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:RenderingJob.token)
+  // @@protoc_insertion_point(field_set:proto.renderer.rendering_job.token)
 }
-inline std::string* RenderingJob::mutable_token() {
+inline std::string* rendering_job::mutable_token() {
   std::string* _s = _internal_mutable_token();
-  // @@protoc_insertion_point(field_mutable:RenderingJob.token)
+  // @@protoc_insertion_point(field_mutable:proto.renderer.rendering_job.token)
   return _s;
 }
-inline const std::string& RenderingJob::_internal_token() const {
+inline const std::string& rendering_job::_internal_token() const {
   return _impl_.token_.Get();
 }
-inline void RenderingJob::_internal_set_token(const std::string& value) {
+inline void rendering_job::_internal_set_token(const std::string& value) {
   
   _impl_.token_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RenderingJob::_internal_mutable_token() {
+inline std::string* rendering_job::_internal_mutable_token() {
   
   return _impl_.token_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RenderingJob::release_token() {
-  // @@protoc_insertion_point(field_release:RenderingJob.token)
+inline std::string* rendering_job::release_token() {
+  // @@protoc_insertion_point(field_release:proto.renderer.rendering_job.token)
   return _impl_.token_.Release();
 }
-inline void RenderingJob::set_allocated_token(std::string* token) {
+inline void rendering_job::set_allocated_token(std::string* token) {
   if (token != nullptr) {
     
   } else {
@@ -871,113 +882,143 @@ inline void RenderingJob::set_allocated_token(std::string* token) {
     _impl_.token_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:RenderingJob.token)
+  // @@protoc_insertion_point(field_set_allocated:proto.renderer.rendering_job.token)
 }
 
-// uint32 project_id = 2;
-inline void RenderingJob::clear_project_id() {
-  _impl_.project_id_ = 0u;
+// string project_id = 2;
+inline void rendering_job::clear_project_id() {
+  _impl_.project_id_.ClearToEmpty();
 }
-inline uint32_t RenderingJob::_internal_project_id() const {
-  return _impl_.project_id_;
-}
-inline uint32_t RenderingJob::project_id() const {
-  // @@protoc_insertion_point(field_get:RenderingJob.project_id)
+inline const std::string& rendering_job::project_id() const {
+  // @@protoc_insertion_point(field_get:proto.renderer.rendering_job.project_id)
   return _internal_project_id();
 }
-inline void RenderingJob::_internal_set_project_id(uint32_t value) {
-  
-  _impl_.project_id_ = value;
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void rendering_job::set_project_id(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.project_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:proto.renderer.rendering_job.project_id)
 }
-inline void RenderingJob::set_project_id(uint32_t value) {
-  _internal_set_project_id(value);
-  // @@protoc_insertion_point(field_set:RenderingJob.project_id)
+inline std::string* rendering_job::mutable_project_id() {
+  std::string* _s = _internal_mutable_project_id();
+  // @@protoc_insertion_point(field_mutable:proto.renderer.rendering_job.project_id)
+  return _s;
+}
+inline const std::string& rendering_job::_internal_project_id() const {
+  return _impl_.project_id_.Get();
+}
+inline void rendering_job::_internal_set_project_id(const std::string& value) {
+  
+  _impl_.project_id_.Set(value, GetArenaForAllocation());
+}
+inline std::string* rendering_job::_internal_mutable_project_id() {
+  
+  return _impl_.project_id_.Mutable(GetArenaForAllocation());
+}
+inline std::string* rendering_job::release_project_id() {
+  // @@protoc_insertion_point(field_release:proto.renderer.rendering_job.project_id)
+  return _impl_.project_id_.Release();
+}
+inline void rendering_job::set_allocated_project_id(std::string* project_id) {
+  if (project_id != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.project_id_.SetAllocated(project_id, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.project_id_.IsDefault()) {
+    _impl_.project_id_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:proto.renderer.rendering_job.project_id)
 }
 
 // uint32 jobid = 3;
-inline void RenderingJob::clear_jobid() {
+inline void rendering_job::clear_jobid() {
   _impl_.jobid_ = 0u;
 }
-inline uint32_t RenderingJob::_internal_jobid() const {
+inline uint32_t rendering_job::_internal_jobid() const {
   return _impl_.jobid_;
 }
-inline uint32_t RenderingJob::jobid() const {
-  // @@protoc_insertion_point(field_get:RenderingJob.jobid)
+inline uint32_t rendering_job::jobid() const {
+  // @@protoc_insertion_point(field_get:proto.renderer.rendering_job.jobid)
   return _internal_jobid();
 }
-inline void RenderingJob::_internal_set_jobid(uint32_t value) {
+inline void rendering_job::_internal_set_jobid(uint32_t value) {
   
   _impl_.jobid_ = value;
 }
-inline void RenderingJob::set_jobid(uint32_t value) {
+inline void rendering_job::set_jobid(uint32_t value) {
   _internal_set_jobid(value);
-  // @@protoc_insertion_point(field_set:RenderingJob.jobid)
+  // @@protoc_insertion_point(field_set:proto.renderer.rendering_job.jobid)
 }
 
-// repeated .ProjectFiles files = 4;
-inline int RenderingJob::_internal_files_size() const {
+// repeated .proto.renderer.project_files files = 4;
+inline int rendering_job::_internal_files_size() const {
   return _impl_.files_.size();
 }
-inline int RenderingJob::files_size() const {
+inline int rendering_job::files_size() const {
   return _internal_files_size();
 }
-inline void RenderingJob::clear_files() {
+inline void rendering_job::clear_files() {
   _impl_.files_.Clear();
 }
-inline ::ProjectFiles* RenderingJob::mutable_files(int index) {
-  // @@protoc_insertion_point(field_mutable:RenderingJob.files)
+inline ::proto::renderer::project_files* rendering_job::mutable_files(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.renderer.rendering_job.files)
   return _impl_.files_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ProjectFiles >*
-RenderingJob::mutable_files() {
-  // @@protoc_insertion_point(field_mutable_list:RenderingJob.files)
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::renderer::project_files >*
+rendering_job::mutable_files() {
+  // @@protoc_insertion_point(field_mutable_list:proto.renderer.rendering_job.files)
   return &_impl_.files_;
 }
-inline const ::ProjectFiles& RenderingJob::_internal_files(int index) const {
+inline const ::proto::renderer::project_files& rendering_job::_internal_files(int index) const {
   return _impl_.files_.Get(index);
 }
-inline const ::ProjectFiles& RenderingJob::files(int index) const {
-  // @@protoc_insertion_point(field_get:RenderingJob.files)
+inline const ::proto::renderer::project_files& rendering_job::files(int index) const {
+  // @@protoc_insertion_point(field_get:proto.renderer.rendering_job.files)
   return _internal_files(index);
 }
-inline ::ProjectFiles* RenderingJob::_internal_add_files() {
+inline ::proto::renderer::project_files* rendering_job::_internal_add_files() {
   return _impl_.files_.Add();
 }
-inline ::ProjectFiles* RenderingJob::add_files() {
-  ::ProjectFiles* _add = _internal_add_files();
-  // @@protoc_insertion_point(field_add:RenderingJob.files)
+inline ::proto::renderer::project_files* rendering_job::add_files() {
+  ::proto::renderer::project_files* _add = _internal_add_files();
+  // @@protoc_insertion_point(field_add:proto.renderer.rendering_job.files)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ProjectFiles >&
-RenderingJob::files() const {
-  // @@protoc_insertion_point(field_list:RenderingJob.files)
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::renderer::project_files >&
+rendering_job::files() const {
+  // @@protoc_insertion_point(field_list:proto.renderer.rendering_job.files)
   return _impl_.files_;
 }
 
-// .ProjectFiles projectFile = 5;
-inline bool RenderingJob::_internal_has_projectfile() const {
+// .proto.renderer.project_files projectFile = 5;
+inline bool rendering_job::_internal_has_projectfile() const {
   return this != internal_default_instance() && _impl_.projectfile_ != nullptr;
 }
-inline bool RenderingJob::has_projectfile() const {
+inline bool rendering_job::has_projectfile() const {
   return _internal_has_projectfile();
 }
-inline void RenderingJob::clear_projectfile() {
+inline void rendering_job::clear_projectfile() {
   if (GetArenaForAllocation() == nullptr && _impl_.projectfile_ != nullptr) {
     delete _impl_.projectfile_;
   }
   _impl_.projectfile_ = nullptr;
 }
-inline const ::ProjectFiles& RenderingJob::_internal_projectfile() const {
-  const ::ProjectFiles* p = _impl_.projectfile_;
-  return p != nullptr ? *p : reinterpret_cast<const ::ProjectFiles&>(
-      ::_ProjectFiles_default_instance_);
+inline const ::proto::renderer::project_files& rendering_job::_internal_projectfile() const {
+  const ::proto::renderer::project_files* p = _impl_.projectfile_;
+  return p != nullptr ? *p : reinterpret_cast<const ::proto::renderer::project_files&>(
+      ::proto::renderer::_project_files_default_instance_);
 }
-inline const ::ProjectFiles& RenderingJob::projectfile() const {
-  // @@protoc_insertion_point(field_get:RenderingJob.projectFile)
+inline const ::proto::renderer::project_files& rendering_job::projectfile() const {
+  // @@protoc_insertion_point(field_get:proto.renderer.rendering_job.projectFile)
   return _internal_projectfile();
 }
-inline void RenderingJob::unsafe_arena_set_allocated_projectfile(
-    ::ProjectFiles* projectfile) {
+inline void rendering_job::unsafe_arena_set_allocated_projectfile(
+    ::proto::renderer::project_files* projectfile) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.projectfile_);
   }
@@ -987,11 +1028,11 @@ inline void RenderingJob::unsafe_arena_set_allocated_projectfile(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:RenderingJob.projectFile)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:proto.renderer.rendering_job.projectFile)
 }
-inline ::ProjectFiles* RenderingJob::release_projectfile() {
+inline ::proto::renderer::project_files* rendering_job::release_projectfile() {
   
-  ::ProjectFiles* temp = _impl_.projectfile_;
+  ::proto::renderer::project_files* temp = _impl_.projectfile_;
   _impl_.projectfile_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -1004,27 +1045,27 @@ inline ::ProjectFiles* RenderingJob::release_projectfile() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::ProjectFiles* RenderingJob::unsafe_arena_release_projectfile() {
-  // @@protoc_insertion_point(field_release:RenderingJob.projectFile)
+inline ::proto::renderer::project_files* rendering_job::unsafe_arena_release_projectfile() {
+  // @@protoc_insertion_point(field_release:proto.renderer.rendering_job.projectFile)
   
-  ::ProjectFiles* temp = _impl_.projectfile_;
+  ::proto::renderer::project_files* temp = _impl_.projectfile_;
   _impl_.projectfile_ = nullptr;
   return temp;
 }
-inline ::ProjectFiles* RenderingJob::_internal_mutable_projectfile() {
+inline ::proto::renderer::project_files* rendering_job::_internal_mutable_projectfile() {
   
   if (_impl_.projectfile_ == nullptr) {
-    auto* p = CreateMaybeMessage<::ProjectFiles>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::proto::renderer::project_files>(GetArenaForAllocation());
     _impl_.projectfile_ = p;
   }
   return _impl_.projectfile_;
 }
-inline ::ProjectFiles* RenderingJob::mutable_projectfile() {
-  ::ProjectFiles* _msg = _internal_mutable_projectfile();
-  // @@protoc_insertion_point(field_mutable:RenderingJob.projectFile)
+inline ::proto::renderer::project_files* rendering_job::mutable_projectfile() {
+  ::proto::renderer::project_files* _msg = _internal_mutable_projectfile();
+  // @@protoc_insertion_point(field_mutable:proto.renderer.rendering_job.projectFile)
   return _msg;
 }
-inline void RenderingJob::set_allocated_projectfile(::ProjectFiles* projectfile) {
+inline void rendering_job::set_allocated_projectfile(::proto::renderer::project_files* projectfile) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.projectfile_;
@@ -1041,7 +1082,7 @@ inline void RenderingJob::set_allocated_projectfile(::ProjectFiles* projectfile)
     
   }
   _impl_.projectfile_ = projectfile;
-  // @@protoc_insertion_point(field_set_allocated:RenderingJob.projectFile)
+  // @@protoc_insertion_point(field_set_allocated:proto.renderer.rendering_job.projectFile)
 }
 
 #ifdef __GNUC__
@@ -1054,13 +1095,15 @@ inline void RenderingJob::set_allocated_projectfile(::ProjectFiles* projectfile)
 
 // @@protoc_insertion_point(namespace_scope)
 
+}  // namespace renderer
+}  // namespace proto
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::ControlPackageCategory> : ::std::true_type {};
+template <> struct is_proto_enum< ::proto::renderer::ControlPackageCategory> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ControlPackageCategory>() {
-  return ::ControlPackageCategory_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::proto::renderer::ControlPackageCategory>() {
+  return ::proto::renderer::ControlPackageCategory_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

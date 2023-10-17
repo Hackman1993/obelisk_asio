@@ -1,7 +1,13 @@
 #include <iostream>
-#include "
+#include "../common/control_client.h"
+#include "../common/packages/package.h"
+#include "../common/protos/client_info.pb.h"
 int main()
 {
+    boost::asio::io_context ios;
+    auto client = std::make_shared<control_client>(ios);
+    client->connect("127.0.0.1", 6601);
+    ios.run();
 
 #ifndef __RDSERVER__
     std::cout << "client" << std::endl;

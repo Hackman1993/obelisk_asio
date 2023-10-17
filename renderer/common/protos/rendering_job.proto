@@ -1,24 +1,25 @@
 syntax = "proto3";
+package proto.renderer;
 enum ControlPackageCategory{
   CLIENT_RENDERER_REGISTER = 0;
   CLIENT_RENDERER_JOB_FEEDBACK = 1;
   CLIENT_TRY_GET_RENDER_JOB = 3;
   CLIENT_QUERY_JOB_DETAIL = 4;
 }
-message RenderingJobItem{
+message rendering_job_item{
   int32 frame = 1;
   string working_dir = 2;
 }
 
-message ProjectFiles{
+message project_files{
   string relative_path = 1;
   string download_url = 2;
 }
 
-message RenderingJob{
+message rendering_job{
   string token = 1;
-  uint32 project_id = 2;
+  string project_id = 2;
   uint32 jobid = 3;
-  repeated ProjectFiles files = 4;
-  ProjectFiles projectFile = 5;
+  repeated project_files files = 4;
+  project_files projectFile = 5;
 }

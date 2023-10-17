@@ -20,112 +20,118 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace _pb = ::PROTOBUF_NAMESPACE_ID;
 namespace _pbi = _pb::internal;
 
-PROTOBUF_CONSTEXPR RenderingJobItem::RenderingJobItem(
+namespace proto {
+namespace renderer {
+PROTOBUF_CONSTEXPR rendering_job_item::rendering_job_item(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.working_dir_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.frame_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RenderingJobItemDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RenderingJobItemDefaultTypeInternal()
+struct rendering_job_itemDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR rendering_job_itemDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RenderingJobItemDefaultTypeInternal() {}
+  ~rendering_job_itemDefaultTypeInternal() {}
   union {
-    RenderingJobItem _instance;
+    rendering_job_item _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RenderingJobItemDefaultTypeInternal _RenderingJobItem_default_instance_;
-PROTOBUF_CONSTEXPR ProjectFiles::ProjectFiles(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 rendering_job_itemDefaultTypeInternal _rendering_job_item_default_instance_;
+PROTOBUF_CONSTEXPR project_files::project_files(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.relative_path_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.download_url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct ProjectFilesDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ProjectFilesDefaultTypeInternal()
+struct project_filesDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR project_filesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~ProjectFilesDefaultTypeInternal() {}
+  ~project_filesDefaultTypeInternal() {}
   union {
-    ProjectFiles _instance;
+    project_files _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ProjectFilesDefaultTypeInternal _ProjectFiles_default_instance_;
-PROTOBUF_CONSTEXPR RenderingJob::RenderingJob(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 project_filesDefaultTypeInternal _project_files_default_instance_;
+PROTOBUF_CONSTEXPR rendering_job::rendering_job(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.files_)*/{}
   , /*decltype(_impl_.token_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.project_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.projectfile_)*/nullptr
-  , /*decltype(_impl_.project_id_)*/0u
   , /*decltype(_impl_.jobid_)*/0u
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RenderingJobDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RenderingJobDefaultTypeInternal()
+struct rendering_jobDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR rendering_jobDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RenderingJobDefaultTypeInternal() {}
+  ~rendering_jobDefaultTypeInternal() {}
   union {
-    RenderingJob _instance;
+    rendering_job _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RenderingJobDefaultTypeInternal _RenderingJob_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 rendering_jobDefaultTypeInternal _rendering_job_default_instance_;
+}  // namespace renderer
+}  // namespace proto
 static ::_pb::Metadata file_level_metadata_rendering_5fjob_2eproto[3];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_rendering_5fjob_2eproto[1];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_rendering_5fjob_2eproto = nullptr;
 
 const uint32_t TableStruct_rendering_5fjob_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::RenderingJobItem, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::rendering_job_item, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RenderingJobItem, _impl_.frame_),
-  PROTOBUF_FIELD_OFFSET(::RenderingJobItem, _impl_.working_dir_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::rendering_job_item, _impl_.frame_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::rendering_job_item, _impl_.working_dir_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ProjectFiles, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::project_files, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::ProjectFiles, _impl_.relative_path_),
-  PROTOBUF_FIELD_OFFSET(::ProjectFiles, _impl_.download_url_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::project_files, _impl_.relative_path_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::project_files, _impl_.download_url_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::RenderingJob, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::rendering_job, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RenderingJob, _impl_.token_),
-  PROTOBUF_FIELD_OFFSET(::RenderingJob, _impl_.project_id_),
-  PROTOBUF_FIELD_OFFSET(::RenderingJob, _impl_.jobid_),
-  PROTOBUF_FIELD_OFFSET(::RenderingJob, _impl_.files_),
-  PROTOBUF_FIELD_OFFSET(::RenderingJob, _impl_.projectfile_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::rendering_job, _impl_.token_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::rendering_job, _impl_.project_id_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::rendering_job, _impl_.jobid_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::rendering_job, _impl_.files_),
+  PROTOBUF_FIELD_OFFSET(::proto::renderer::rendering_job, _impl_.projectfile_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::RenderingJobItem)},
-  { 8, -1, -1, sizeof(::ProjectFiles)},
-  { 16, -1, -1, sizeof(::RenderingJob)},
+  { 0, -1, -1, sizeof(::proto::renderer::rendering_job_item)},
+  { 8, -1, -1, sizeof(::proto::renderer::project_files)},
+  { 16, -1, -1, sizeof(::proto::renderer::rendering_job)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-  &::_RenderingJobItem_default_instance_._instance,
-  &::_ProjectFiles_default_instance_._instance,
-  &::_RenderingJob_default_instance_._instance,
+  &::proto::renderer::_rendering_job_item_default_instance_._instance,
+  &::proto::renderer::_project_files_default_instance_._instance,
+  &::proto::renderer::_rendering_job_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_rendering_5fjob_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\023rendering_job.proto\"6\n\020RenderingJobIte"
-  "m\022\r\n\005frame\030\001 \001(\005\022\023\n\013working_dir\030\002 \001(\t\";\n"
-  "\014ProjectFiles\022\025\n\rrelative_path\030\001 \001(\t\022\024\n\014"
-  "download_url\030\002 \001(\t\"\202\001\n\014RenderingJob\022\r\n\005t"
-  "oken\030\001 \001(\t\022\022\n\nproject_id\030\002 \001(\r\022\r\n\005jobid\030"
-  "\003 \001(\r\022\034\n\005files\030\004 \003(\0132\r.ProjectFiles\022\"\n\013p"
-  "rojectFile\030\005 \001(\0132\r.ProjectFiles*\224\001\n\026Cont"
-  "rolPackageCategory\022\034\n\030CLIENT_RENDERER_RE"
-  "GISTER\020\000\022 \n\034CLIENT_RENDERER_JOB_FEEDBACK"
-  "\020\001\022\035\n\031CLIENT_TRY_GET_RENDER_JOB\020\003\022\033\n\027CLI"
-  "ENT_QUERY_JOB_DETAIL\020\004b\006proto3"
+  "\n\023rendering_job.proto\022\016proto.renderer\"8\n"
+  "\022rendering_job_item\022\r\n\005frame\030\001 \001(\005\022\023\n\013wo"
+  "rking_dir\030\002 \001(\t\"<\n\rproject_files\022\025\n\rrela"
+  "tive_path\030\001 \001(\t\022\024\n\014download_url\030\002 \001(\t\"\243\001"
+  "\n\rrendering_job\022\r\n\005token\030\001 \001(\t\022\022\n\nprojec"
+  "t_id\030\002 \001(\t\022\r\n\005jobid\030\003 \001(\r\022,\n\005files\030\004 \003(\013"
+  "2\035.proto.renderer.project_files\0222\n\013proje"
+  "ctFile\030\005 \001(\0132\035.proto.renderer.project_fi"
+  "les*\224\001\n\026ControlPackageCategory\022\034\n\030CLIENT"
+  "_RENDERER_REGISTER\020\000\022 \n\034CLIENT_RENDERER_"
+  "JOB_FEEDBACK\020\001\022\035\n\031CLIENT_TRY_GET_RENDER_"
+  "JOB\020\003\022\033\n\027CLIENT_QUERY_JOB_DETAIL\020\004b\006prot"
+  "o3"
   ;
 static ::_pbi::once_flag descriptor_table_rendering_5fjob_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_rendering_5fjob_2eproto = {
-    false, false, 430, descriptor_table_protodef_rendering_5fjob_2eproto,
+    false, false, 482, descriptor_table_protodef_rendering_5fjob_2eproto,
     "rendering_job.proto",
     &descriptor_table_rendering_5fjob_2eproto_once, nullptr, 0, 3,
     schemas, file_default_instances, TableStruct_rendering_5fjob_2eproto::offsets,
@@ -138,6 +144,8 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_renderin
 
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_rendering_5fjob_2eproto(&descriptor_table_rendering_5fjob_2eproto);
+namespace proto {
+namespace renderer {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ControlPackageCategory_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_rendering_5fjob_2eproto);
   return file_level_enum_descriptors_rendering_5fjob_2eproto[0];
@@ -157,19 +165,19 @@ bool ControlPackageCategory_IsValid(int value) {
 
 // ===================================================================
 
-class RenderingJobItem::_Internal {
+class rendering_job_item::_Internal {
  public:
 };
 
-RenderingJobItem::RenderingJobItem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+rendering_job_item::rendering_job_item(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:RenderingJobItem)
+  // @@protoc_insertion_point(arena_constructor:proto.renderer.rendering_job_item)
 }
-RenderingJobItem::RenderingJobItem(const RenderingJobItem& from)
+rendering_job_item::rendering_job_item(const rendering_job_item& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RenderingJobItem* const _this = this; (void)_this;
+  rendering_job_item* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.working_dir_){}
     , decltype(_impl_.frame_){}
@@ -185,10 +193,10 @@ RenderingJobItem::RenderingJobItem(const RenderingJobItem& from)
       _this->GetArenaForAllocation());
   }
   _this->_impl_.frame_ = from._impl_.frame_;
-  // @@protoc_insertion_point(copy_constructor:RenderingJobItem)
+  // @@protoc_insertion_point(copy_constructor:proto.renderer.rendering_job_item)
 }
 
-inline void RenderingJobItem::SharedCtor(
+inline void rendering_job_item::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -203,8 +211,8 @@ inline void RenderingJobItem::SharedCtor(
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-RenderingJobItem::~RenderingJobItem() {
-  // @@protoc_insertion_point(destructor:RenderingJobItem)
+rendering_job_item::~rendering_job_item() {
+  // @@protoc_insertion_point(destructor:proto.renderer.rendering_job_item)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -212,17 +220,17 @@ RenderingJobItem::~RenderingJobItem() {
   SharedDtor();
 }
 
-inline void RenderingJobItem::SharedDtor() {
+inline void rendering_job_item::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.working_dir_.Destroy();
 }
 
-void RenderingJobItem::SetCachedSize(int size) const {
+void rendering_job_item::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void RenderingJobItem::Clear() {
-// @@protoc_insertion_point(message_clear_start:RenderingJobItem)
+void rendering_job_item::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.renderer.rendering_job_item)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -232,7 +240,7 @@ void RenderingJobItem::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RenderingJobItem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* rendering_job_item::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -252,7 +260,7 @@ const char* RenderingJobItem::_InternalParse(const char* ptr, ::_pbi::ParseConte
           auto str = _internal_mutable_working_dir();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "RenderingJobItem.working_dir"));
+          CHK_(::_pbi::VerifyUTF8(str, "proto.renderer.rendering_job_item.working_dir"));
         } else
           goto handle_unusual;
         continue;
@@ -279,9 +287,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* RenderingJobItem::_InternalSerialize(
+uint8_t* rendering_job_item::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:RenderingJobItem)
+  // @@protoc_insertion_point(serialize_to_array_start:proto.renderer.rendering_job_item)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -296,7 +304,7 @@ uint8_t* RenderingJobItem::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_working_dir().data(), static_cast<int>(this->_internal_working_dir().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "RenderingJobItem.working_dir");
+      "proto.renderer.rendering_job_item.working_dir");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_working_dir(), target);
   }
@@ -305,12 +313,12 @@ uint8_t* RenderingJobItem::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:RenderingJobItem)
+  // @@protoc_insertion_point(serialize_to_array_end:proto.renderer.rendering_job_item)
   return target;
 }
 
-size_t RenderingJobItem::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:RenderingJobItem)
+size_t rendering_job_item::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.renderer.rendering_job_item)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -332,17 +340,17 @@ size_t RenderingJobItem::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RenderingJobItem::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData rendering_job_item::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RenderingJobItem::MergeImpl
+    rendering_job_item::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RenderingJobItem::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*rendering_job_item::GetClassData() const { return &_class_data_; }
 
 
-void RenderingJobItem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RenderingJobItem*>(&to_msg);
-  auto& from = static_cast<const RenderingJobItem&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RenderingJobItem)
+void rendering_job_item::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<rendering_job_item*>(&to_msg);
+  auto& from = static_cast<const rendering_job_item&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.renderer.rendering_job_item)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -356,18 +364,18 @@ void RenderingJobItem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void RenderingJobItem::CopyFrom(const RenderingJobItem& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:RenderingJobItem)
+void rendering_job_item::CopyFrom(const rendering_job_item& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.renderer.rendering_job_item)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool RenderingJobItem::IsInitialized() const {
+bool rendering_job_item::IsInitialized() const {
   return true;
 }
 
-void RenderingJobItem::InternalSwap(RenderingJobItem* other) {
+void rendering_job_item::InternalSwap(rendering_job_item* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -379,7 +387,7 @@ void RenderingJobItem::InternalSwap(RenderingJobItem* other) {
   swap(_impl_.frame_, other->_impl_.frame_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata RenderingJobItem::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata rendering_job_item::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_rendering_5fjob_2eproto_getter, &descriptor_table_rendering_5fjob_2eproto_once,
       file_level_metadata_rendering_5fjob_2eproto[0]);
@@ -387,19 +395,19 @@ void RenderingJobItem::InternalSwap(RenderingJobItem* other) {
 
 // ===================================================================
 
-class ProjectFiles::_Internal {
+class project_files::_Internal {
  public:
 };
 
-ProjectFiles::ProjectFiles(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+project_files::project_files(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:ProjectFiles)
+  // @@protoc_insertion_point(arena_constructor:proto.renderer.project_files)
 }
-ProjectFiles::ProjectFiles(const ProjectFiles& from)
+project_files::project_files(const project_files& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  ProjectFiles* const _this = this; (void)_this;
+  project_files* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.relative_path_){}
     , decltype(_impl_.download_url_){}
@@ -422,10 +430,10 @@ ProjectFiles::ProjectFiles(const ProjectFiles& from)
     _this->_impl_.download_url_.Set(from._internal_download_url(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:ProjectFiles)
+  // @@protoc_insertion_point(copy_constructor:proto.renderer.project_files)
 }
 
-inline void ProjectFiles::SharedCtor(
+inline void project_files::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -444,8 +452,8 @@ inline void ProjectFiles::SharedCtor(
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-ProjectFiles::~ProjectFiles() {
-  // @@protoc_insertion_point(destructor:ProjectFiles)
+project_files::~project_files() {
+  // @@protoc_insertion_point(destructor:proto.renderer.project_files)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -453,18 +461,18 @@ ProjectFiles::~ProjectFiles() {
   SharedDtor();
 }
 
-inline void ProjectFiles::SharedDtor() {
+inline void project_files::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.relative_path_.Destroy();
   _impl_.download_url_.Destroy();
 }
 
-void ProjectFiles::SetCachedSize(int size) const {
+void project_files::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void ProjectFiles::Clear() {
-// @@protoc_insertion_point(message_clear_start:ProjectFiles)
+void project_files::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.renderer.project_files)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -474,7 +482,7 @@ void ProjectFiles::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ProjectFiles::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* project_files::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -486,7 +494,7 @@ const char* ProjectFiles::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_relative_path();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "ProjectFiles.relative_path"));
+          CHK_(::_pbi::VerifyUTF8(str, "proto.renderer.project_files.relative_path"));
         } else
           goto handle_unusual;
         continue;
@@ -496,7 +504,7 @@ const char* ProjectFiles::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_download_url();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "ProjectFiles.download_url"));
+          CHK_(::_pbi::VerifyUTF8(str, "proto.renderer.project_files.download_url"));
         } else
           goto handle_unusual;
         continue;
@@ -523,9 +531,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* ProjectFiles::_InternalSerialize(
+uint8_t* project_files::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ProjectFiles)
+  // @@protoc_insertion_point(serialize_to_array_start:proto.renderer.project_files)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -534,7 +542,7 @@ uint8_t* ProjectFiles::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_relative_path().data(), static_cast<int>(this->_internal_relative_path().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ProjectFiles.relative_path");
+      "proto.renderer.project_files.relative_path");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_relative_path(), target);
   }
@@ -544,7 +552,7 @@ uint8_t* ProjectFiles::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_download_url().data(), static_cast<int>(this->_internal_download_url().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ProjectFiles.download_url");
+      "proto.renderer.project_files.download_url");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_download_url(), target);
   }
@@ -553,12 +561,12 @@ uint8_t* ProjectFiles::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ProjectFiles)
+  // @@protoc_insertion_point(serialize_to_array_end:proto.renderer.project_files)
   return target;
 }
 
-size_t ProjectFiles::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ProjectFiles)
+size_t project_files::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.renderer.project_files)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -582,17 +590,17 @@ size_t ProjectFiles::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ProjectFiles::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData project_files::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    ProjectFiles::MergeImpl
+    project_files::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ProjectFiles::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*project_files::GetClassData() const { return &_class_data_; }
 
 
-void ProjectFiles::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<ProjectFiles*>(&to_msg);
-  auto& from = static_cast<const ProjectFiles&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:ProjectFiles)
+void project_files::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<project_files*>(&to_msg);
+  auto& from = static_cast<const project_files&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.renderer.project_files)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -606,18 +614,18 @@ void ProjectFiles::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void ProjectFiles::CopyFrom(const ProjectFiles& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ProjectFiles)
+void project_files::CopyFrom(const project_files& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.renderer.project_files)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool ProjectFiles::IsInitialized() const {
+bool project_files::IsInitialized() const {
   return true;
 }
 
-void ProjectFiles::InternalSwap(ProjectFiles* other) {
+void project_files::InternalSwap(project_files* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -632,7 +640,7 @@ void ProjectFiles::InternalSwap(ProjectFiles* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ProjectFiles::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata project_files::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_rendering_5fjob_2eproto_getter, &descriptor_table_rendering_5fjob_2eproto_once,
       file_level_metadata_rendering_5fjob_2eproto[1]);
@@ -640,29 +648,29 @@ void ProjectFiles::InternalSwap(ProjectFiles* other) {
 
 // ===================================================================
 
-class RenderingJob::_Internal {
+class rendering_job::_Internal {
  public:
-  static const ::ProjectFiles& projectfile(const RenderingJob* msg);
+  static const ::proto::renderer::project_files& projectfile(const rendering_job* msg);
 };
 
-const ::ProjectFiles&
-RenderingJob::_Internal::projectfile(const RenderingJob* msg) {
+const ::proto::renderer::project_files&
+rendering_job::_Internal::projectfile(const rendering_job* msg) {
   return *msg->_impl_.projectfile_;
 }
-RenderingJob::RenderingJob(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+rendering_job::rendering_job(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:RenderingJob)
+  // @@protoc_insertion_point(arena_constructor:proto.renderer.rendering_job)
 }
-RenderingJob::RenderingJob(const RenderingJob& from)
+rendering_job::rendering_job(const rendering_job& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RenderingJob* const _this = this; (void)_this;
+  rendering_job* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.files_){from._impl_.files_}
     , decltype(_impl_.token_){}
-    , decltype(_impl_.projectfile_){nullptr}
     , decltype(_impl_.project_id_){}
+    , decltype(_impl_.projectfile_){nullptr}
     , decltype(_impl_.jobid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
@@ -675,24 +683,30 @@ RenderingJob::RenderingJob(const RenderingJob& from)
     _this->_impl_.token_.Set(from._internal_token(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_projectfile()) {
-    _this->_impl_.projectfile_ = new ::ProjectFiles(*from._impl_.projectfile_);
+  _impl_.project_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.project_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_project_id().empty()) {
+    _this->_impl_.project_id_.Set(from._internal_project_id(), 
+      _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.project_id_, &from._impl_.project_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.jobid_) -
-    reinterpret_cast<char*>(&_impl_.project_id_)) + sizeof(_impl_.jobid_));
-  // @@protoc_insertion_point(copy_constructor:RenderingJob)
+  if (from._internal_has_projectfile()) {
+    _this->_impl_.projectfile_ = new ::proto::renderer::project_files(*from._impl_.projectfile_);
+  }
+  _this->_impl_.jobid_ = from._impl_.jobid_;
+  // @@protoc_insertion_point(copy_constructor:proto.renderer.rendering_job)
 }
 
-inline void RenderingJob::SharedCtor(
+inline void rendering_job::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.files_){arena}
     , decltype(_impl_.token_){}
+    , decltype(_impl_.project_id_){}
     , decltype(_impl_.projectfile_){nullptr}
-    , decltype(_impl_.project_id_){0u}
     , decltype(_impl_.jobid_){0u}
     , /*decltype(_impl_._cached_size_)*/{}
   };
@@ -700,10 +714,14 @@ inline void RenderingJob::SharedCtor(
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.token_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.project_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.project_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-RenderingJob::~RenderingJob() {
-  // @@protoc_insertion_point(destructor:RenderingJob)
+rendering_job::~rendering_job() {
+  // @@protoc_insertion_point(destructor:proto.renderer.rendering_job)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -711,36 +729,36 @@ RenderingJob::~RenderingJob() {
   SharedDtor();
 }
 
-inline void RenderingJob::SharedDtor() {
+inline void rendering_job::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.files_.~RepeatedPtrField();
   _impl_.token_.Destroy();
+  _impl_.project_id_.Destroy();
   if (this != internal_default_instance()) delete _impl_.projectfile_;
 }
 
-void RenderingJob::SetCachedSize(int size) const {
+void rendering_job::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void RenderingJob::Clear() {
-// @@protoc_insertion_point(message_clear_start:RenderingJob)
+void rendering_job::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.renderer.rendering_job)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.files_.Clear();
   _impl_.token_.ClearToEmpty();
+  _impl_.project_id_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.projectfile_ != nullptr) {
     delete _impl_.projectfile_;
   }
   _impl_.projectfile_ = nullptr;
-  ::memset(&_impl_.project_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.jobid_) -
-      reinterpret_cast<char*>(&_impl_.project_id_)) + sizeof(_impl_.jobid_));
+  _impl_.jobid_ = 0u;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RenderingJob::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* rendering_job::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -752,15 +770,17 @@ const char* RenderingJob::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_token();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "RenderingJob.token"));
+          CHK_(::_pbi::VerifyUTF8(str, "proto.renderer.rendering_job.token"));
         } else
           goto handle_unusual;
         continue;
-      // uint32 project_id = 2;
+      // string project_id = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.project_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_project_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "proto.renderer.rendering_job.project_id"));
         } else
           goto handle_unusual;
         continue;
@@ -772,7 +792,7 @@ const char* RenderingJob::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // repeated .ProjectFiles files = 4;
+      // repeated .proto.renderer.project_files files = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
@@ -785,7 +805,7 @@ const char* RenderingJob::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // .ProjectFiles projectFile = 5;
+      // .proto.renderer.project_files projectFile = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_projectfile(), ptr);
@@ -816,9 +836,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* RenderingJob::_InternalSerialize(
+uint8_t* rendering_job::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:RenderingJob)
+  // @@protoc_insertion_point(serialize_to_array_start:proto.renderer.rendering_job)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -827,15 +847,19 @@ uint8_t* RenderingJob::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_token().data(), static_cast<int>(this->_internal_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "RenderingJob.token");
+      "proto.renderer.rendering_job.token");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_token(), target);
   }
 
-  // uint32 project_id = 2;
-  if (this->_internal_project_id() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_project_id(), target);
+  // string project_id = 2;
+  if (!this->_internal_project_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_project_id().data(), static_cast<int>(this->_internal_project_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.renderer.rendering_job.project_id");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_project_id(), target);
   }
 
   // uint32 jobid = 3;
@@ -844,7 +868,7 @@ uint8_t* RenderingJob::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_jobid(), target);
   }
 
-  // repeated .ProjectFiles files = 4;
+  // repeated .proto.renderer.project_files files = 4;
   for (unsigned i = 0,
       n = static_cast<unsigned>(this->_internal_files_size()); i < n; i++) {
     const auto& repfield = this->_internal_files(i);
@@ -852,7 +876,7 @@ uint8_t* RenderingJob::_InternalSerialize(
         InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // .ProjectFiles projectFile = 5;
+  // .proto.renderer.project_files projectFile = 5;
   if (this->_internal_has_projectfile()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::projectfile(this),
@@ -863,19 +887,19 @@ uint8_t* RenderingJob::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:RenderingJob)
+  // @@protoc_insertion_point(serialize_to_array_end:proto.renderer.rendering_job)
   return target;
 }
 
-size_t RenderingJob::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:RenderingJob)
+size_t rendering_job::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.renderer.rendering_job)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .ProjectFiles files = 4;
+  // repeated .proto.renderer.project_files files = 4;
   total_size += 1UL * this->_internal_files_size();
   for (const auto& msg : this->_impl_.files_) {
     total_size +=
@@ -889,16 +913,18 @@ size_t RenderingJob::ByteSizeLong() const {
         this->_internal_token());
   }
 
-  // .ProjectFiles projectFile = 5;
+  // string project_id = 2;
+  if (!this->_internal_project_id().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_project_id());
+  }
+
+  // .proto.renderer.project_files projectFile = 5;
   if (this->_internal_has_projectfile()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.projectfile_);
-  }
-
-  // uint32 project_id = 2;
-  if (this->_internal_project_id() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_project_id());
   }
 
   // uint32 jobid = 3;
@@ -909,17 +935,17 @@ size_t RenderingJob::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RenderingJob::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData rendering_job::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RenderingJob::MergeImpl
+    rendering_job::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RenderingJob::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*rendering_job::GetClassData() const { return &_class_data_; }
 
 
-void RenderingJob::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RenderingJob*>(&to_msg);
-  auto& from = static_cast<const RenderingJob&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RenderingJob)
+void rendering_job::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<rendering_job*>(&to_msg);
+  auto& from = static_cast<const rendering_job&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:proto.renderer.rendering_job)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -928,12 +954,12 @@ void RenderingJob::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   if (!from._internal_token().empty()) {
     _this->_internal_set_token(from._internal_token());
   }
-  if (from._internal_has_projectfile()) {
-    _this->_internal_mutable_projectfile()->::ProjectFiles::MergeFrom(
-        from._internal_projectfile());
-  }
-  if (from._internal_project_id() != 0) {
+  if (!from._internal_project_id().empty()) {
     _this->_internal_set_project_id(from._internal_project_id());
+  }
+  if (from._internal_has_projectfile()) {
+    _this->_internal_mutable_projectfile()->::proto::renderer::project_files::MergeFrom(
+        from._internal_projectfile());
   }
   if (from._internal_jobid() != 0) {
     _this->_internal_set_jobid(from._internal_jobid());
@@ -941,18 +967,18 @@ void RenderingJob::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void RenderingJob::CopyFrom(const RenderingJob& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:RenderingJob)
+void rendering_job::CopyFrom(const rendering_job& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.renderer.rendering_job)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool RenderingJob::IsInitialized() const {
+bool rendering_job::IsInitialized() const {
   return true;
 }
 
-void RenderingJob::InternalSwap(RenderingJob* other) {
+void rendering_job::InternalSwap(rendering_job* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -962,33 +988,39 @@ void RenderingJob::InternalSwap(RenderingJob* other) {
       &_impl_.token_, lhs_arena,
       &other->_impl_.token_, rhs_arena
   );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.project_id_, lhs_arena,
+      &other->_impl_.project_id_, rhs_arena
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RenderingJob, _impl_.jobid_)
-      + sizeof(RenderingJob::_impl_.jobid_)
-      - PROTOBUF_FIELD_OFFSET(RenderingJob, _impl_.projectfile_)>(
+      PROTOBUF_FIELD_OFFSET(rendering_job, _impl_.jobid_)
+      + sizeof(rendering_job::_impl_.jobid_)
+      - PROTOBUF_FIELD_OFFSET(rendering_job, _impl_.projectfile_)>(
           reinterpret_cast<char*>(&_impl_.projectfile_),
           reinterpret_cast<char*>(&other->_impl_.projectfile_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata RenderingJob::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata rendering_job::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_rendering_5fjob_2eproto_getter, &descriptor_table_rendering_5fjob_2eproto_once,
       file_level_metadata_rendering_5fjob_2eproto[2]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
+}  // namespace renderer
+}  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::RenderingJobItem*
-Arena::CreateMaybeMessage< ::RenderingJobItem >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::RenderingJobItem >(arena);
+template<> PROTOBUF_NOINLINE ::proto::renderer::rendering_job_item*
+Arena::CreateMaybeMessage< ::proto::renderer::rendering_job_item >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::renderer::rendering_job_item >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ProjectFiles*
-Arena::CreateMaybeMessage< ::ProjectFiles >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ProjectFiles >(arena);
+template<> PROTOBUF_NOINLINE ::proto::renderer::project_files*
+Arena::CreateMaybeMessage< ::proto::renderer::project_files >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::renderer::project_files >(arena);
 }
-template<> PROTOBUF_NOINLINE ::RenderingJob*
-Arena::CreateMaybeMessage< ::RenderingJob >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::RenderingJob >(arena);
+template<> PROTOBUF_NOINLINE ::proto::renderer::rendering_job*
+Arena::CreateMaybeMessage< ::proto::renderer::rendering_job >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::proto::renderer::rendering_job >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

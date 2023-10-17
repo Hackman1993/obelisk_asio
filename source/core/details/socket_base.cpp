@@ -10,6 +10,7 @@ namespace obelisk::core::details {
     void socket_base::e_connected_() {
         self_holder_ = shared_from_this();
         post_receive();
+        e_connected();
     }
 
     void socket_base::send() {
@@ -46,13 +47,14 @@ namespace obelisk::core::details {
         e_data_sent(bytes_transferred);
     }
 
-    socket_base::socket_base(boost::asio::ip::tcp::socket &socket): socket_(std::move(socket)) {}
-
     void socket_base::close() {
-        if(socket_.is_open())
+        if(socket_.is_open()){
             socket_.close();
-        if(io_reference_ == 0)
+        }
+        if(io_reference_ == 0){
+            e_disconnected();
             self_holder_ = nullptr;
+        }
     }
 
     void socket_base::post_receive() {
@@ -70,7 +72,6 @@ namespace obelisk::core::details {
     }
 
     void socket_base::connect(const std::string &addr, std::uint16_t port) {
-        boost::asio::ip::tcp::resolver::query resolver("127.0.0.1", "7890");
         boost::asio::ip::tcp::endpoint ep(boost::asio::ip::address::from_string(addr),port);
         socket_.async_connect(ep, [&](const boost::system::error_code& error){
             if(!error)
@@ -78,4 +79,7 @@ namespace obelisk::core::details {
         });
 
     }
+
+    socket_base::socket_base(boost::asio::io_context &ctx) : socket_(ctx){}
+    socket_base::socket_base(boost::asio::ip::tcp::socket &socket): socket_(std::move(socket)) {}
 } // obelisk::core::details
