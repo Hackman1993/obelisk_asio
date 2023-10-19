@@ -21,6 +21,7 @@ namespace obelisk::core::details {
             write_pending_ = false;
             if(bytes_transferred > 0) outstream_.consume(bytes_transferred);
             bytes_sent_(error, bytes_transferred);
+
         });
     }
 
@@ -32,9 +33,10 @@ namespace obelisk::core::details {
             return;
         }
         instream_.commit(bytes_transferred);
-        e_data_received(bytes_transferred);
+
         std::cout << "Readed Bytes : " << bytes_transferred << std::endl;
-        post_receive();
+        if(e_data_received(bytes_transferred)) post_receive();
+        else this->close();
     }
 
     void socket_base::bytes_sent_(const boost::system::error_code &error, std::size_t bytes_transferred) {

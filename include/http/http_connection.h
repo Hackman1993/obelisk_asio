@@ -31,7 +31,7 @@ namespace obelisk::http {
         void write_outgoing_request();
         void e_connected() override;
         void e_data_sent(std::size_t bytes_transferred) override;
-        void e_data_received(std::size_t bytes_transferred) override;
+        bool e_data_received(std::size_t bytes_transferred) override;
     };
 
 } // obelisk::http

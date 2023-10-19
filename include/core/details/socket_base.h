@@ -16,7 +16,7 @@ namespace obelisk::core::details {
         virtual ~socket_base();
         virtual void e_connected() = 0;
         virtual void e_data_sent(std::size_t bytes_transferred) = 0;
-        virtual void e_data_received(std::size_t bytes_transferred) = 0;
+        virtual bool e_data_received(std::size_t bytes_transferred) = 0;
         virtual void send();
         virtual void close();
     protected:

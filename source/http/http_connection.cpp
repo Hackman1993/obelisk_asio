@@ -25,7 +25,7 @@ namespace obelisk::http {
         write_outgoing_request();
     }
 
-    void http_connection::e_data_received(std::size_t bytes_transferred) {
+    bool http_connection::e_data_received(std::size_t bytes_transferred) {
         bool finished;
         do {
             finished = expecting_body_ ? handle_body_() : handle_header_();
@@ -34,6 +34,7 @@ namespace obelisk::http {
                 request_ = std::make_shared<http_request>();
             }
         } while (finished && instream_.size() > 0);
+        return true;
     }
 
     bool http_connection::handle_header_() {
