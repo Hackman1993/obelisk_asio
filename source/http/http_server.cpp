@@ -23,6 +23,10 @@ namespace obelisk {
             });
         }
 
+        std::shared_ptr<route_item>& http_server::route(const std::string& route, std::function<std::shared_ptr<http_response> (std::shared_ptr<http_request>&)> handler){
+            return routes_.emplace_back(std::make_shared<route_item>(route, handler));
+        }
+
         std::shared_ptr<http_response> http_server::on_request_(std::shared_ptr<http_request> &request) {
             std::shared_ptr<http_response> resp = nullptr;
             {

@@ -19,6 +19,7 @@ namespace obelisk::http {
     public:
         http_server(boost::asio::io_context& ctx, const std::string& webroot);
         void listen(const std::string& address, unsigned short port);
+        std::shared_ptr<route_item>& route(const std::string& route, std::function<std::shared_ptr<http_response> (std::shared_ptr<http_request>&)> handler);
     protected:
         std::filesystem::path webroot_;
         std::vector<std::string> index_files_= {"index.html", "index.htm"};

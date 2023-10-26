@@ -48,6 +48,10 @@ namespace obelisk::http {
     class http_request{
     public:
         void set_param(const std::string& name, const std::string& value);
+        bool contains_param(const std::string& name);
+        bool contains_file(const std::string& file);
+        std::shared_ptr<http_file> file(const std::string& file);
+        std::vector<std::string> param(const std::string& name);
         http_header header_;
         std::string path_;
         std::string boundary_;

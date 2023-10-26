@@ -15,6 +15,22 @@ namespace obelisk::http {
         }
     }
 
+    bool http_request::contains_param(const std::string &name) {
+        return params_.contains(name);
+    }
+
+    bool http_request::contains_file(const std::string &file) {
+        return filebag_.contains(file);
+    }
+
+    std::shared_ptr<http_file> http_request::file(const std::string &file) {
+        return filebag_[file];
+    }
+
+    std::vector<std::string> http_request::param(const std::string &name) {
+        return params_[name];
+    }
+
     http_temp_fstream::http_temp_fstream(std::string path): path_(std::move(path)) {
         std::ofstream fstream(path_);
         fstream.close();

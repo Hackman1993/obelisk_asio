@@ -69,7 +69,8 @@ namespace obelisk::http {
                 request_->raw_ = std::make_shared<std::stringstream>();
             }
             if (instream_.size() > 0)
-                handle_body_();
+                return handle_body_();
+
         } else return true;
 
         return false;
