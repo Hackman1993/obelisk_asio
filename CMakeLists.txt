@@ -29,6 +29,7 @@ install(FILES
         ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config.cmake
         ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config-version.cmake
         DESTINATION share/${PROJECT_NAME})
+
 install(TARGETS ${PROJECT_NAME}
         EXPORT ${PROJECT_NAME}-targets
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
