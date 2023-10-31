@@ -12,7 +12,7 @@
 #include <string>
 #include <memory>
 #include <functional>
-#include "http/router/route_param.h"
+#include "route_param.h"
 
 namespace obelisk::http {
     class http_response;
