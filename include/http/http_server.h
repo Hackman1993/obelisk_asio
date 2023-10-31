@@ -7,7 +7,7 @@
 
 #ifndef OBELISK_HTTP_SERVER_H
 #define OBELISK_HTTP_SERVER_H
-#include "core/acceptor.h"
+#include "../core/acceptor.h"
 #include <filesystem>
 #include "http_connection.h"
 namespace obelisk::http {

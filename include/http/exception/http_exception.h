@@ -8,7 +8,7 @@
 #ifndef OBELISK_HTTP_EXCEPTION_H
 #define OBELISK_HTTP_EXCEPTION_H
 #include <sahara/exception/exception_base.h>
-#include "http/core/http_response_code.h"
+#include "../core/http_response_code.h"
 namespace obelisk::http {
     class http_exception : public sahara::exception::exception_base {
     public:

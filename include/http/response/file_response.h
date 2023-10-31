@@ -7,7 +7,7 @@
 
 #ifndef OBELISK_FILE_RESPONSE_H
 #define OBELISK_FILE_RESPONSE_H
-#include "http/core/http_response.h"
+#include "../core/http_response.h"
 namespace obelisk::http {
     class file_response : public http_response{
     public:

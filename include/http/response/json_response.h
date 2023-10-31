@@ -4,7 +4,7 @@
 
 #ifndef OBELISK_JSON_RESPONSE_H
 #define OBELISK_JSON_RESPONSE_H
-#include "http/core/http_response.h"
+#include "../core/http_response.h"
 #include <boost/json.hpp>
 namespace obelisk::http {
 

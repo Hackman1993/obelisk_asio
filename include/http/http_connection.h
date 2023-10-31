@@ -8,7 +8,7 @@
 #ifndef OBELISK_HTTP_CONNECTION_H
 #define OBELISK_HTTP_CONNECTION_H
 #include <queue>
-#include "core/details/socket_base.h"
+#include "../core/details/socket_base.h"
 
 namespace obelisk::http {
     class http_request;

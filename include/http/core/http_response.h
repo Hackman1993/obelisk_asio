@@ -7,7 +7,7 @@
 #include <string>
 #include <memory>
 #include <unordered_map>
-#include "http/core/http_response_code.h"
+#include "../core/http_response_code.h"
 #include "raw_http_response.h"
 namespace obelisk::http {
 
