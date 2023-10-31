@@ -11,6 +11,7 @@
 #include <memory>
 #include <utility>
 #include <mutex>
+#include <atomic>
     namespace obelisk::http {
 
         class raw_http_response {

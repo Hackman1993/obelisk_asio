@@ -7,7 +7,7 @@
 
 #include "http/core/raw_http_response.h"
 #include <istream>
-
+#include <cstring>
     namespace obelisk::http {
         std::uint32_t raw_http_response::read(unsigned char *buffer, std::uint32_t length) {
             std::scoped_lock<std::mutex> lock(mutex_);
