@@ -6,14 +6,11 @@
 #include <boost/asio.hpp>
 #include "core/acceptor.h"
 #include "http/http_server.h"
-class A{};
-class B : public A{};
 int main()
 {
-    std::shared_ptr<A> ptr = std::make_shared<B>();
     try{
         boost::asio::io_context ioctx;
-        obelisk::http::http_server server(ioctx, "D:\\Workspace\\website\\VSPA_Frontend\\dist");
+        obelisk::http::http_server server(ioctx, "C:\\Users\\Hackman.Lo\\Desktop\\BBC");
         server.listen("127.0.0.1", 3308);
         ioctx.run();
     } catch (std::exception& err){
@@ -58,7 +55,7 @@ int main()
 ////        addr.sin_addr.s_addr = htonl(INADDR_ANY);
 ////        addr.sin_port = htons(3307);
 ////
-////        char data[100] = {0};
+////        char data_[100] = {0};
 ////        if(bind(listenfd, (struct sockaddr*)&addr, sizeof(addr)) == -1){
 ////            THROW(obelisk::network_exception,strerror(errno), "module");
 ////        }

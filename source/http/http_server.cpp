@@ -42,9 +42,9 @@ namespace obelisk {
             if(!resp){
                 for(const auto&ptr : routes_){
                     std::unordered_map<std::string,std::string> route_params;
-                    if(!ptr->match(request->path_, route_params))
+                    if(!ptr->match(std::string(request->path()), route_params))
                         continue;
-                    if(!ptr->method_allowed(request->header_.title_.method_))
+                    if(!ptr->method_allowed(request->method()))
                         THROW(http_exception, "Method Not Allowed!", "Obelisk", EHTTP_RESP_STATUS::EST_METHOD_NOT_ALLOWED);
                     request->route_params_ = route_params;
                     resp = ptr->handle(request);
@@ -53,7 +53,7 @@ namespace obelisk {
             }
             if(!resp){
                 std::filesystem::path path(webroot_);
-                path.append("./" + request->path_);
+                path.append(std::string(".").append(request->path()));
                 if(std::filesystem::exists(path)){
                     if(!std::filesystem::is_directory(path)){
                         resp = std::make_shared<file_response>(path.string(), EHTTP_RESP_STATUS::EST_OK);
@@ -69,14 +69,14 @@ namespace obelisk {
             }
 
             if(!resp)
-                resp = std::make_shared<json_response>(boost::json::object({{"code",    404}, {"message", "Not Found"}, {"data",    boost::json::value()}}), EHTTP_RESP_STATUS::EST_NOT_FOUND);
+                resp = std::make_shared<json_response>(boost::json::object({{"code",    404}, {"message", "Not Found"}, {"data_",    boost::json::value()}}), EHTTP_RESP_STATUS::EST_NOT_FOUND);
 
             for(const auto& ptr : middlewares_){
                 auto derived_ptr = std::dynamic_pointer_cast<after_middleware>(ptr);
                 if(derived_ptr) derived_ptr->after_handle(request, resp);
             }
 
-            resp->add_header("Host", request->header_.headers_["Host"]);
+            resp->add_header("Host", request->header("Host"));
             resp->add_header("Cache-Control", "no-cache, private");
             resp->add_header("Vary", "Origin");
             resp->add_header("Content-Length", std::to_string(resp->content_length()));

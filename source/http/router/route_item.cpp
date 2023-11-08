@@ -9,6 +9,7 @@
 #include <boost/spirit/home/x3.hpp>
 #include <boost/fusion/adapted/struct.hpp>
 #include "http/exception/route_exception.h"
+#include "http/router/route_param.h"
 #include <regex>
 #include <iostream>
 BOOST_FUSION_ADAPT_STRUCT(obelisk::http::route_param, name_, static_);
@@ -39,7 +40,7 @@ namespace obelisk::http {
     }
 
     bool route_item::match(const std::string &path, std::unordered_map<std::string,std::string>& route_params) {
-        return route_extract(address_, path, pattern_, route_params);
+        return route_param::extract(address_, path, pattern_, route_params);
     }
 
     bool route_item::method_allowed(const std::string &method) {

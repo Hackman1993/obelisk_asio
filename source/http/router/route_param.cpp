@@ -8,7 +8,8 @@
 #include "http/router/route_param.h"
 
 namespace obelisk::http {
-    bool route_extract(const std::regex &regex, const std::string &path, const std::vector<route_param> &pattern, std::unordered_map<std::string, std::string> &route_params) {
+
+    bool route_param::extract(const std::regex &regex, const std::string &path, const std::vector<route_param> &pattern, std::unordered_map<std::string, std::string> &params) {
         std::smatch smatch;
         if(std::regex_match(path, smatch,regex)) {
             if(smatch.size()-1 != pattern.size())
@@ -18,7 +19,7 @@ namespace obelisk::http {
                 if(pattern[i-1].static_ || pattern[i-1].name_ =="*")
                     continue;
                 else{
-                    route_params.emplace(pattern[i-1].name_, data);
+                    params.emplace(pattern[i-1].name_, data);
                 }
             }
             return true;

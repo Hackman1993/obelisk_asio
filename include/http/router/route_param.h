@@ -15,8 +15,8 @@ namespace obelisk::http {
     struct route_param {
         std::string name_;
         bool static_ = false;
-    };
 
-    bool route_extract(const std::regex& regex, const std::string& path, const std::vector<route_param>& pattern, std::unordered_map<std::string, std::string>& params);
+        static bool extract(const std::regex& regex, const std::string& path, const std::vector<route_param>& pattern, std::unordered_map<std::string, std::string>& params);
+    };
 } // obelisk
 #endif //OBELISK_ROUTE_PARAM_H

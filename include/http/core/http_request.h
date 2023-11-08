@@ -12,20 +12,10 @@
 #include <variant>
 #include <filesystem>
 #include <unordered_map>
+
 namespace obelisk::http {
     class http_connection;
-
-    struct request_title {
-        std::string method_;
-        std::string target_;
-        std::string protocol_;
-    };
-
-    struct http_header{
-        request_title title_;
-        std::unordered_map<std::string, std::string> headers_;
-    };
-
+    class http_block_data;
     class http_temp_fstream : public std::fstream{
     public:
         explicit http_temp_fstream(std::string path);
@@ -47,20 +37,31 @@ namespace obelisk::http {
 
     class http_request{
     public:
+        http_request(std::shared_ptr<http_block_data>& data);
         void set_param(const std::string& name, const std::string& value);
-        bool contains_param(const std::string& name);
-        bool contains_file(const std::string& file);
-        std::shared_ptr<http_file> file(const std::string& file);
-        std::vector<std::string> param(const std::string& name);
-        http_header header_;
-        std::string path_;
-        std::string boundary_;
-        std::string content_type_;
-        std::uint64_t content_length_ = 0;
-        std::shared_ptr<std::iostream> raw_;
-        std::unordered_map<std::string, std::vector<std::string>> params_;
+
+        std::shared_ptr<http_file>& file(const std::string& file);
+        const std::vector<std::string>& param(const std::string& name);
+        [[nodiscard]] const std::string& method() const;
+        [[nodiscard]] const std::string& target() const;
+        [[nodiscard]] const std::string_view& path() const;
+        [[nodiscard]] const std::string& protocol() const;
+        [[nodiscard]] std::uint64_t content_length() const;
+        [[nodiscard]] bool has_header(const std::string& name) const;
+        [[nodiscard]] bool contains_file(const std::string& file) const;
+        [[nodiscard]] bool contains_param(const std::string& name) const;
+        [[nodiscard]] const std::string& header(const std::string& name) const;
+        std::shared_ptr<http_block_data>& raw();
+        const std::string_view& content_type();
         std::unordered_map<std::string, std::string> route_params_;
         std::unordered_map<std::string, std::shared_ptr<http_file>> filebag_;
+    protected:
+        std::shared_ptr<http_block_data> data_;
+        std::string_view path_;
+        std::string_view content_type_;
+        std::uint64_t content_length_ = 0;
+        std::unordered_map<std::string, std::vector<std::string>> params_;
+
     };
 
 } // core

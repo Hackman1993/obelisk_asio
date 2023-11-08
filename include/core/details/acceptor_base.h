@@ -6,6 +6,7 @@
 #define OBELISK_ACCEPTOR_BASE_H
 #include <boost/asio.hpp>
 #include "socket_base.h"
+
 namespace obelisk::core::details {
     class acceptor_base {
     public:

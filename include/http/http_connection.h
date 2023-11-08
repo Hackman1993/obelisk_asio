@@ -14,15 +14,17 @@ namespace obelisk::http {
     class http_request;
     class http_response;
     class raw_http_response;
+    class http_block_data;
     class http_connection : public core::details::socket_base {
     public:
         http_connection(boost::asio::ip::tcp::socket &socket);
+
         void write_response(const std::shared_ptr<http_response> &resp);
         void on_request_received(const std::function<std::shared_ptr<http_response>(std::shared_ptr<http_request>&)>& callback);
     protected:
-        virtual void e_request_received();
+        virtual void e_request_received(std::shared_ptr<http_request>& request);
         std::atomic_bool expecting_body_ = false;
-        std::shared_ptr<http_request> request_;
+        std::shared_ptr<http_block_data> request_;
         std::uint64_t body_reamains_ = 0;
         std::queue<std::shared_ptr<http::raw_http_response>> out_requests_;
         std::function<std::shared_ptr<http_response> (std::shared_ptr<http_request>&)> f_requested_;

@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include "core/details/socket_base.h"
-
+#include <sahara/log/log.h>
 
 namespace obelisk::core::details {
     void socket_base::e_connected_() {
@@ -78,6 +78,9 @@ namespace obelisk::core::details {
         socket_.async_connect(ep, [&](const boost::system::error_code& error){
             if(!error)
                 this->e_connected_();
+            else{
+                LOG_DEBUG("Socket connection failed due to :{}", error.what());
+            }
         });
 
     }

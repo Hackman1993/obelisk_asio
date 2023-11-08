@@ -8,7 +8,7 @@ namespace obelisk::http {
     }
 
     void required_validator::validate(const std::string &name, http_request &request) {
-        if (!request.params_.contains(name)) {
+        if (!request.contains_param(name)) {
             throw obelisk::http::validation_exception("Required param " + name + " not found");
         }
     }

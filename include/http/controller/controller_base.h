@@ -18,7 +18,7 @@ namespace obelisk {
       auto data = boost::json::object{
           {"code", code == 200? 0:code},
           {"message", message.to_std()},
-          {"data", result}
+          {"data_", result}
       };
       return std::make_unique<obelisk::json_response>(data, code);
     }

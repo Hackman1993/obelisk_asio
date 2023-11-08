@@ -13,12 +13,19 @@ namespace obelisk::http {
 
     class socket;
 
-    bool boundary_parse(std::string_view  data, const std::shared_ptr<http_request>& request);
-    bool package_header_parse(std::string_view data, std::shared_ptr<http_request> request);
+//    bool boundary_parse(std::string_view  data_, const std::shared_ptr<http_request>& request);
+//    bool package_header_parse(std::string_view data_, std::shared_ptr<http_request> request);
+//
+//    bool http_body_parser(std::shared_ptr<http_request> &request);
+//    bool http_multipart_body_parser(std::shared_ptr<http_request> &request);
+//    bool http_urlencoded_param_parser(std::shared_ptr<http_request> &request, std::string_view data_);
 
-    bool http_body_parser(std::shared_ptr<http_request> &request);
-    bool http_multipart_body_parser(std::shared_ptr<http_request> &request);
-    bool http_urlencoded_param_parser(std::shared_ptr<http_request> &request, std::string_view data);
+    bool boundary_parse(std::string_view  data, http_block_data& request);
+    bool package_header_parse(std::string_view data, http_block_data& request);
+
+    bool http_body_parser(http_block_data &request);
+    bool http_multipart_body_parser(http_block_data& request);
+    bool http_urlencoded_param_parser(http_block_data& request, std::string_view data);
 
 
 } // obelisk
