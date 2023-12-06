@@ -8,9 +8,9 @@
 #ifndef OBELISK_HTTP_RESPONSE_CODE_H
 #define OBELISK_HTTP_RESPONSE_CODE_H
 
-namespace obelisk {
+namespace obelisk::http {
 
-    enum EHTTP_RESP_STATUS {
+    enum EResponseCode {
         EST_CONTINUE = 100u,
         EST_OK = 200u,
         EST_CREATED = 201u,

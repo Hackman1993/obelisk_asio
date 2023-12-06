@@ -9,7 +9,7 @@ namespace obelisk::http {
 
   class validation_exception : public http_exception{
   public:
-    explicit validation_exception(const std::string& what, EHTTP_RESP_STATUS code = EST_UNPROCESSABLE_CONTENT) : http_exception(what, code){}
+    explicit validation_exception(const std::string& what, EResponseCode code = EST_UNPROCESSABLE_CONTENT) : http_exception(what, code){}
   };
 
 } // obelisk

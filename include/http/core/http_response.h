@@ -15,7 +15,7 @@ namespace obelisk::http {
 
     class http_response {
     public:
-        explicit http_response(EHTTP_RESP_STATUS code);
+        explicit http_response(EResponseCode code);
 
         virtual ~http_response() = default;
         virtual void add_header(const std::string& name, const std::string& value);
@@ -26,7 +26,7 @@ namespace obelisk::http {
 
         std::shared_ptr<obelisk::http::raw_http_response> serialize();
     protected:
-        static std::unordered_map<EHTTP_RESP_STATUS, std::string> resp_status_map_;
+        static std::unordered_map<EResponseCode, std::string> resp_status_map_;
         http_block_data data_{};
     };
 

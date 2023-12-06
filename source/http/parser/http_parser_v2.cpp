@@ -27,11 +27,11 @@ namespace obelisk::http {
                                      (+~char_(" \r\n") >> " " >> +~char_(" \r\n") >> " " >> +~char_(" \r\n") >> "\r\n" >> attr(false)));
     RULE(HttpHeadersParser, string_pair) =  +~char_(":\r\n") >> ": " >> (+~char_("\r\n")) >> "\r\n";
     RULE(HttpPackageHeaderParser, http_header) = MetaParser >> +(HttpHeadersParser) >> "\r\n";
-    RULE(MultipartBoundaryParser, std::string) = no_case["multipart/form-data_; boundary="] >> (+~char_("\r\n"));
+    RULE(MultipartBoundaryParser, std::string) = no_case["multipart/form-data; boundary="] >> (+~char_("\r\n"));
 
     RULE(MultipartMetaName, string_pair) = (no_case["name"] > attr(std::string("name")) > "=" > '"' > lexeme[*(char_ - '"')] > '"');
     RULE(MultipartMetaFilename, string_pair) = (no_case["filename"] > attr(std::string("filename")) > "=" > '"' > lexeme[*(char_ - '"')] > '"');
-    RULE(MultipartMetaFormData, string_pair) = lit("form-data_") > attr("form-data_") > attr("form-data_");
+    RULE(MultipartMetaFormData, string_pair) = lit("form-data") > attr("form-data") > attr("form-data");
     RULE(MultipartMeta, string_pair) = MultipartMetaName | MultipartMetaFilename | MultipartMetaFormData;
 
     RULE(UrlEncodedData, string_pair) = *~char_("=&") >> -lit("=") >> *~char_("&");

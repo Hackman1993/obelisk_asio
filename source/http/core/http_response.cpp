@@ -6,7 +6,7 @@
 #include "http/core/http_response.h"
 
 namespace obelisk::http {
-    std::unordered_map<EHTTP_RESP_STATUS, std::string> http_response::resp_status_map_{
+    std::unordered_map<EResponseCode, std::string> http_response::resp_status_map_{
             {EST_CONTINUE, "Continue"},
             {EST_OK, "OK"},
             {EST_CREATED, "Created"},
@@ -44,7 +44,7 @@ namespace obelisk::http {
 
     };
 
-    http_response::http_response(EHTTP_RESP_STATUS code) {
+    http_response::http_response(EResponseCode code) {
         data_.header_.meta_.p1_ = "HTTP/1.1";
         data_.header_.meta_.p2_ = std::to_string(code);
         data_.header_.meta_.p3_ = resp_status_map_[code];

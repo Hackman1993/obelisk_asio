@@ -45,7 +45,7 @@ namespace obelisk {
                     if(!ptr->match(std::string(request->path()), route_params))
                         continue;
                     if(!ptr->method_allowed(request->method()))
-                        THROW(http_exception, "Method Not Allowed!", "Obelisk", EHTTP_RESP_STATUS::EST_METHOD_NOT_ALLOWED);
+                        THROW(http_exception, "Method Not Allowed!", "Obelisk", EResponseCode::EST_METHOD_NOT_ALLOWED);
                     request->route_params_ = route_params;
                     resp = ptr->handle(request);
                     if(resp) break;
@@ -56,20 +56,20 @@ namespace obelisk {
                 path.append(std::string(".").append(request->path()));
                 if(std::filesystem::exists(path)){
                     if(!std::filesystem::is_directory(path)){
-                        resp = std::make_shared<file_response>(path.string(), EHTTP_RESP_STATUS::EST_OK);
+                        resp = std::make_shared<file_response>(path.string(), EResponseCode::EST_OK);
                     }else{
                         for(const auto& index: index_files_){
                             std::filesystem::path index_path(path);
                             index_path.append(index);
                             if(std::filesystem::exists(index_path) && !std::filesystem::is_directory(index_path))
-                                resp = std::make_shared<file_response>(index_path.string(), EHTTP_RESP_STATUS::EST_OK);
+                                resp = std::make_shared<file_response>(index_path.string(), EResponseCode::EST_OK);
                         }
                     }
                 }
             }
 
             if(!resp)
-                resp = std::make_shared<json_response>(boost::json::object({{"code",    404}, {"message", "Not Found"}, {"data_",    boost::json::value()}}), EHTTP_RESP_STATUS::EST_NOT_FOUND);
+                resp = std::make_shared<json_response>(boost::json::object({{"code",    404}, {"message", "Not Found"}, {"data_",    boost::json::value()}}), EResponseCode::EST_NOT_FOUND);
 
             for(const auto& ptr : middlewares_){
                 auto derived_ptr = std::dynamic_pointer_cast<after_middleware>(ptr);

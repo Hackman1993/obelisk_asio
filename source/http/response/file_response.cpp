@@ -11,13 +11,13 @@
 #include <fstream>
 #include <filesystem>
 namespace obelisk::http {
-    file_response::file_response(const std::string &path, EHTTP_RESP_STATUS code) : http_response(code) {
+    file_response::file_response(const std::string &path, EResponseCode code) : http_response(code) {
         if(std::filesystem::is_directory(path) || !std::filesystem::exists(path))
-            THROW(http_exception, "File Not Found", "Obelisk", EHTTP_RESP_STATUS::EST_NOT_FOUND);
+            THROW(http_exception, "File Not Found", "Obelisk", EResponseCode::EST_NOT_FOUND);
         auto fs = std::make_shared<std::fstream>();
         fs->open(path, std::ios::in | std::ios::binary);
         if(fs->fail()){
-            THROW(http_exception, "Permission Denied", "Obelisk", EHTTP_RESP_STATUS::EST_FORBIDDEN);
+            THROW(http_exception, "Permission Denied", "Obelisk", EResponseCode::EST_FORBIDDEN);
         }
         std::filesystem::path path_(path);
         std::string extension = path_.extension().string();
